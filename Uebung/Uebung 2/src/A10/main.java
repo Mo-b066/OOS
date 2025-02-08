@@ -1,7 +1,10 @@
 package A10;
 
+import java.util.ArrayList;
+
 public class main {
-    public static void main(String [] args){
+    public static void main(String [] args) {
+
 
    Mitarbeiter[] ma = new Mitarbeiter[5];
         ma[0] = new Manager(10.0,10.0,10.0,10.0,10.0);
@@ -17,6 +20,14 @@ public class main {
             System.out.println(ma[i]);
         }
         System.out.println("Bruttosumme = "+bruttoSumme);
+
+
+
+        ArrayList<Mitarbeiter> ma1 = new ArrayList<>();
+        ma1.add(new Angestellter(10, 10, 0));
+        System.out.print(ma1.get(0));
+        ma1.clear();
+
 
 
     }
