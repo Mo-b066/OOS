@@ -1,10 +1,10 @@
-package A26;
+package A29;
 
 public class Main {
     public static void main(String[]args){
         @FunctionalInterface
          interface LambdaInterface {
-            public boolean LambdaMethode(int a, int b, int result);
+            public boolean lambdaMethode(int a, int b, int result);
         }
         LambdaInterface add = (x,y,z) -> {
             if (x + y == z) {
@@ -36,10 +36,10 @@ public class Main {
             else{return false;}
         };
 
-        System.out.println("Adition: " + add.LambdaMethode(1,2,3));
-        System.out.println("Subtraktion: " + div.LambdaMethode(4,2,2));
-        System.out.println("Multiplikation: " + multi.LambdaMethode(1,2,2));
-        System.out.println("Divison: " + add.LambdaMethode(1,2,3));
+        System.out.println("Adition: " + add.lambdaMethode(1,2,3));
+        System.out.println("Subtraktion: " + div.lambdaMethode(4,2,2));
+        System.out.println("Multiplikation: " + multi.lambdaMethode(1,2,2));
+        System.out.println("Divison: " + add.lambdaMethode(1,2,3));
 
     }
 }
