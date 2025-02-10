@@ -12,3 +12,4 @@ class SeaBearGuardProxy implements BearProtectInterface {
         }
     }
 }
+

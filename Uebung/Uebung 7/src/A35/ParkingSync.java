@@ -19,7 +19,6 @@ public class ParkingSync {
         thread4.start();
         thread5.start();
 
-
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException ex) {

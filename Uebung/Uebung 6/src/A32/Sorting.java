@@ -26,10 +26,6 @@ public class Sorting {
         for(Human h:mensch){
             System.out.println(h.toString());
         }
-
-
     }
-
-
-
 }
+

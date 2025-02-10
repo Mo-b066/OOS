@@ -8,3 +8,4 @@ public class NatureParkVisitorClient {
         proxy.allowVisit(5678); // Zugriff verweigert
     }
 }
+
