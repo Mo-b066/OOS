@@ -4,6 +4,12 @@ public class Main {
     @FunctionalInterface
     interface StringMethod{
         String run(String eingabe);
+
+    }
+    public static void printFormatted(StringMethod input, String result){
+        result = input.run(result);
+        System.out.println(result);
+
     }
 
     public static void main(String[]strg){
@@ -15,11 +21,5 @@ public class Main {
         printFormatted(bsp2, "bye");
     }
 
-
-    public static void printFormatted(StringMethod input, String result){
-        result = input.run(result);
-        System.out.println(result);
-
-    }
 
 }
