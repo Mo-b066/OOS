@@ -1,0 +1,50 @@
+[
+  {
+    "CLASSNAME": "Transfer",
+    "INSTANCE": {
+      "date": "2024-12-09",
+      "description": "Testing my Transaction",
+      "amount": 34234.0
+    }
+  },
+  {
+    "CLASSNAME": "Transfer",
+    "INSTANCE": {
+      "date": "2024-12-09",
+      "description": "testing transfer from Kelvin to Jules",
+      "amount": 60.0
+    }
+  },
+  {
+    "CLASSNAME": "Transfer",
+    "INSTANCE": {
+      "date": "2024-12-09",
+      "description": "Sending money from Kelvin to Jules",
+      "amount": 40.0
+    }
+  },
+  {
+    "CLASSNAME": "Transfer",
+    "INSTANCE": {
+      "date": "2025-01-05",
+      "description": "Testing transfer to Mohannad",
+      "amount": 100.0
+    }
+  },
+  {
+    "CLASSNAME": "Transfer",
+    "INSTANCE": {
+      "date": "2025-01-05",
+      "description": "Sending money back",
+      "amount": 1.5E8
+    }
+  },
+  {
+    "CLASSNAME": "Transfer",
+    "INSTANCE": {
+      "date": "2025-01-01",
+      "description": "gerobbt",
+      "amount": 1.50034433E8
+    }
+  }
+]

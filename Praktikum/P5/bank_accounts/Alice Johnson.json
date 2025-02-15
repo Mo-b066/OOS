@@ -1,0 +1,30 @@
+[
+  {
+    "CLASSNAME": "Payment",
+    "INSTANCE": {
+      "date": "2024-03-21",
+      "description": "Monthly Salary",
+      "amount": 4500.0,
+      "incomingInterest": 0.05,
+      "outgoingInterest": 0.1
+    }
+  },
+  {
+    "CLASSNAME": "Payment",
+    "INSTANCE": {
+      "date": "2024-03-22",
+      "description": "Rent Payment",
+      "amount": 1200.0,
+      "incomingInterest": 0.05,
+      "outgoingInterest": 0.1
+    }
+  },
+  {
+    "CLASSNAME": "Transfer",
+    "INSTANCE": {
+      "date": "2024-03-26",
+      "description": "Wedding Gift",
+      "amount": 300.0
+    }
+  }
+]

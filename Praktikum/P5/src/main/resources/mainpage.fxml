@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Importieren der benötigten JavaFX-Klassen -->
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<!-- Hauptcontainer: Vertikale Box für das gesamte Layout -->
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.MainPageController"
+      prefHeight="600.0" prefWidth="800.0"
+      spacing="20"
+      styleClass="main-page"
+      stylesheets="@styles.css">
+    
+    <!-- Äußerer Abstand für das gesamte Layout -->
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <!-- Kopfzeile mit Titel und Schaltfläche für neues Konto -->
+    <HBox alignment="CENTER_LEFT" spacing="20" styleClass="header-container">
+        <!-- Titel der Banking-Anwendung -->
+        <Label text="Banking Dashboard" styleClass="main-title"/>
+        <!-- Flexibler Abstandhalter -->
+        <Region HBox.hgrow="ALWAYS" />
+        <!-- Schaltfläche zum Erstellen eines neuen Kontos -->
+        <Button text="+ New Account" onAction="#handleNewAccount" styleClass="primary-button"/>
+    </HBox>
+
+    <!-- Hauptinhalt mit Kontoliste -->
+    <VBox VBox.vgrow="ALWAYS" spacing="15" styleClass="content-container">
+        <!-- Überschrift und Sortierungsmenü -->
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <!-- Überschrift für den Kontobereich -->
+            <Label text="Your Accounts" styleClass="section-title"/>
+            <Region HBox.hgrow="ALWAYS" />
+            <!-- Dropdown-Menü für Sortieroptionen -->
+            <MenuButton text="Sort By" styleClass="sort-button">
+                <items>
+                    <MenuItem text="Name" />
+                    <MenuItem text="Balance" />
+                    <MenuItem text="Recent Activity" />
+                </items>
+            </MenuButton>
+        </HBox>
+        
+        <!-- Liste der Bankkonten -->
+        <ListView fx:id="accountListView" VBox.vgrow="ALWAYS" styleClass="modern-list-view">
+            <!-- Kontextmenü für Kontoaktionen -->
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <!-- Menüeinträge für Kontoaktionen -->
+                        <MenuItem text="View Details" onAction="#handleSelectAccount"/>
+                        <MenuItem text="Delete Account" onAction="#handleDeleteAccount"/>
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </ListView>
+    </VBox>
+</VBox>

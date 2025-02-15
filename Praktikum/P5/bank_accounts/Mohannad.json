@@ -1,0 +1,18 @@
+[
+  {
+    "CLASSNAME": "Transfer",
+    "INSTANCE": {
+      "date": "2025-01-01",
+      "description": "gerobbt",
+      "amount": 1.50034433E8
+    }
+  },
+  {
+    "CLASSNAME": "Transfer",
+    "INSTANCE": {
+      "date": "2025-01-01",
+      "description": "test",
+      "amount": 100.0
+    }
+  }
+]

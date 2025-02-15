@@ -1,0 +1,12 @@
+[
+  {
+    "CLASSNAME": "Payment",
+    "INSTANCE": {
+      "date": "2024-12-09",
+      "description": "Test Transaction",
+      "amount": 3.2423424E7,
+      "incomingInterest": 0.05,
+      "outgoingInterest": 0.1
+    }
+  }
+]

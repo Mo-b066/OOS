@@ -1,0 +1,61 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.AccountViewController"
+      prefHeight="600.0" prefWidth="800.0"
+      spacing="20"
+      styleClass="modern-account-view"
+      stylesheets="@styles.css">
+    
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <HBox styleClass="modern-header">
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Button text="← Back" onAction="#handleBack" styleClass="modern-back-button"/>
+            <Label fx:id="accountNameLabel" styleClass="modern-account-name"/>
+        </VBox>
+        <VBox alignment="CENTER_RIGHT" spacing="8">
+            <Label text="Current Balance" styleClass="modern-balance-label"/>
+            <Label fx:id="balanceLabel" styleClass="modern-balance-amount"/>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="15" styleClass="action-container">
+        <Button text="New Payment" onAction="#handleNewPayment" styleClass="modern-action-button, payment-button"/>
+        <Button text="New Transfer" onAction="#handleNewTransfer" styleClass="modern-action-button, transfer-button"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <MenuButton text="Sort &amp; Filter" styleClass="modern-menu-button">
+            <items>
+                <MenuItem text="Sort by Amount ↑" onAction="#handleSortByAmountAsc"/>
+                <MenuItem text="Sort by Amount ↓" onAction="#handleSortByAmountDesc"/>
+                <MenuItem text="Sort by Date ↑" onAction="#handleSortByDateAsc"/>
+                <MenuItem text="Sort by Date ↓" onAction="#handleSortByDateDesc"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Show All" onAction="#handleShowAll"/>
+                <MenuItem text="Show Payments" onAction="#handleShowPayments"/>
+                <MenuItem text="Show Transfers" onAction="#handleShowTransfers"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Show Positive" onAction="#handleShowPositive"/>
+                <MenuItem text="Show Negative" onAction="#handleShowNegative"/>
+            </items>
+        </MenuButton>
+    </HBox>
+
+    <VBox VBox.vgrow="ALWAYS" styleClass="transactions-container">
+        <Label text="Transaction History" styleClass="section-title"/>
+        <ListView fx:id="transactionListView" VBox.vgrow="ALWAYS" styleClass="modern-transaction-list">
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem text="Delete Transaction" onAction="#handleDeleteTransaction"/>
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </ListView>
+    </VBox>
+</VBox>
